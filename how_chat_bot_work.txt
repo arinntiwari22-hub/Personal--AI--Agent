@@ -1,0 +1,93 @@
+You
+ │
+ ▼
+Type a message
+ │
+ ▼
+Python Program
+ │
+ ▼
+Gemini API
+ │
+ ▼
+Gemini thinks
+ │
+ ▼
+Gemini sends a reply
+ │
+ ▼
+Python displays the reply
+
+Model you can use- 
+models/gemini-2.5-flash
+models/gemini-2.5-pro
+models/gemini-2.0-flash
+models/gemini-2.0-flash-001
+models/gemini-2.0-flash-lite-001
+models/gemini-2.0-flash-lite
+models/gemini-2.5-flash-preview-tts
+models/gemini-2.5-pro-preview-tts
+models/gemma-4-26b-a4b-it
+models/gemma-4-31b-it
+models/gemini-flash-latest
+models/gemini-flash-lite-latest
+models/gemini-pro-latest
+models/gemini-2.5-flash-lite
+models/gemini-2.5-flash-image
+models/gemini-3-pro-preview
+models/gemini-3-flash-preview
+models/gemini-3.1-pro-preview
+models/gemini-3.1-pro-preview-customtools
+models/gemini-3.1-flash-lite-preview
+models/gemini-3.1-flash-lite
+models/gemini-3-pro-image-preview
+models/gemini-3-pro-image
+models/nano-banana-pro-preview
+models/gemini-3.1-flash-image-preview
+models/gemini-3.1-flash-image
+models/gemini-3.1-flash-lite-image
+models/gemini-3.5-flash
+models/gemini-3.5-flash-lite
+models/gemini-omni-flash-preview
+models/gemini-3.6-flash
+models/lyria-3-clip-pre
+
+
+How conversational memory work: 
+ * you can not directly pass the list of conversation 
+ * you have to check what is standard way of sending the conversation to the Api
+ * for gemini this will be in types library in the google.genai 
+ * then do help(types.content)
+ * you will find it 
+ 
+
+
+
+
+ how saving works: 
+ types.Content
+      ↓
+   for loop
+      ↓
+dictionary
+      ↓
+saved_conversation
+      ↓
+json.dump()
+      ↓
+conversation.json
+
+how loading of data work: 
+conversation.json
+      ↓
+json.load()
+      ↓
+saved_conversation
+      ↓
+   for loop
+      ↓
+types.Content
+      ↓
+history / conversation
+      ↓
+Gemini
